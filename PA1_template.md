@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -20,7 +25,7 @@ sd <- aggregate(steps ~ date, data=act, FUN=sum)
 hist(sd$steps)
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 2. Calculate mean and median steps per day.
 
@@ -52,7 +57,7 @@ actavg <- aggregate(steps ~ interval, data=actcomplete, FUN=mean)
 plot(actavg,type="l")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 2. Find the observation with the maximum number of steps.
 
@@ -99,7 +104,7 @@ sdimput <- aggregate(steps ~ date, data=actimput, FUN=sum)
 hist(sdimput$steps)
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 ```r
 mean(sdimput$steps)
@@ -141,11 +146,11 @@ actavgwkend <- aggregate(steps ~ interval, data=actwkend, FUN=mean)
 plot(actavgwkday,type="l")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
 
 ```r
 plot(actavgwkend,type="l")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-10-2.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-2.png) 
 
